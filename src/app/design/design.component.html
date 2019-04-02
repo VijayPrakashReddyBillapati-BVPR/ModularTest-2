@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table table-stripped  border-2"> 
+    <thead>
+  
+      <th><button class="btn btn-light" (click)="sortById()" >CollegeId</button> </th>
+      <th><button class="btn btn-light" (click)="sortByName()" >College Name</button> </th>
+      <th><button class="btn btn-light" (click)="sortBystate()" >State</button></th>
+      <th><button class="btn btn-light" (click)="sortByFee()" >CollegeFee</button></th>
+      <th><button class="btn btn-light"  >Action</button></th>
+    </thead>
+    <tr *ngFor="let College of Colleges  let i= index">
+    <td> {{College.CollegeId}}</td>
+    <td>{{College.CollegeName}}</td>
+    <td>{{College.state}}</td>
+    <td>{{College .CollegeFee | currency:'USD' }}</td>
+    <td> <button class="btn btn-danger " type="submit" (click)="removeBook(i)"> DELETE</button> </td>
+  </tr>
+  </table>
+
+</div>
+
